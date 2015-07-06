@@ -1,3 +1,4 @@
+from __future__ import absolute_import
 from tastypie.authorization import Authorization
 from tastypie.authentication import BasicAuthentication
 from tastypie.resources import ModelResource
