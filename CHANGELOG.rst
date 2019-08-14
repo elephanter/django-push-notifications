@@ -1,3 +1,46 @@
+v1.6.0 (2018-01-31)
+===================
+* BACKWARDS-INCOMPATIBLE: Drop support for Django < 1.11
+* DJANGO: Support Django 2.0
+* NEW FEATURE: Add support for WebPush
+
+v1.5.0 (2017-04-16)
+===================
+* BACKWARDS-INCOMPATIBLE: Remove `push_notifications.api.tastypie` module. Only DRF is supported now.
+* BACKWARDS-INCOMPATIBLE: Drop support for Django < 1.10
+* BACKWARDS-INCOMPATIBLE: Drop support for Django Rest Framework < 3.5
+* DJANGO: Support Django 1.10, 1.11
+* APNS: APNS is now supported using PyAPNS2 instead of an internal implementation.
+* APNS: Stricter certificate validity checks
+* APNS: Allow overriding the certfile from send_message()
+* APNS: Add human-readable error messages
+* APNS: Support thread-id in payload
+* FCM: Add support for FCM (Firebase Cloud Messaging)
+* FCM: Introduce `use_fcm_notification` option to enforce legacy GCM payload
+* GCM: Add GCM_ERROR_TIMEOUT setting
+* GCM: Fix support for sending GCM messages to topic subscribers
+* WNS: Add support for WNS (Windows Notification Service)
+* MISC: Make get_expired_tokens available in push_notifications.utils
+
+v1.4.1 (2016-01-11)
+===================
+* APNS: Increased max device token size to 100 bytes (WWDC 2015, iOS 9)
+* BUGFIX: Fix an index error in the admin
+
+v1.4.0 (2015-12-13)
+===================
+* BACKWARDS-INCOMPATIBLE: Drop support for Python<3.4
+* DJANGO: Support Django 1.9
+* GCM: Handle canonical IDs
+* GCM: Allow full range of GCMDevice.device_id values
+* GCM: Do not allow duplicate registration_ids
+* DRF: Work around empty boolean defaults issue (django-rest-framework#1101)
+* BUGFIX: Do not throw GCMError in bulk messages from the admin
+* BUGFIX: Avoid generating an extra migration on Python 3
+* BUGFIX: Only send in bulk to active devices
+* BUGFIX: Display models correctly in the admin on both Python 2 and 3
+
+
 v1.3.1 (2015-06-30)
 ===================
 This is an errata release.
