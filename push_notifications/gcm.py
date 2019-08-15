@@ -68,6 +68,7 @@ def _fcm_send(data, content_type, application_id):
 		"Authorization": "key=%s" % (key),
 		"Content-Length": str(len(data)),
 	}
+	print(get_manager().get_post_url("FCM", application_id))
 	request = Request(get_manager().get_post_url("FCM", application_id), data, headers)
 	return urlopen(
 		request, timeout=get_manager().get_error_timeout("FCM", application_id)
